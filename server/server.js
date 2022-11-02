@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//Middleware alternative
+//app.use(express.static(path.join(__dirname, "../public")));
+//if using above syntax change line 7 in index.html
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
 });
